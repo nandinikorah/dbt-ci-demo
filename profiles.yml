@@ -1,0 +1,13 @@
+dbt_ci_demo:
+  target: ci
+
+  outputs:
+    ci:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: "{{ env_var('DBT_DB_PASSWORD') }}"
+      port: 5432
+      dbname: analytics
+      schema: public
+      threads: 2
