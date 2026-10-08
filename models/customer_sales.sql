@@ -4,3 +4,4 @@ select
     sum(amount) as total_sales
 from {{ ref('stg_orders') }}
 group by customer_id
+-- Customer-level sales summary
